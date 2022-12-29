@@ -1,0 +1,865 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.107.0">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Contact Us | GovDocs</title>
+<meta name="description" content="This will show how to add or remove tiles from the Contact Us page.
+Add tile
+Open the Contact Us edit page. Add code for new tile. Enable the tile&amp;rsquo;s linked-to page. Remove tile
+Open the Contact Us edit page. Delete the tile code. Disable the tile&amp;rsquo;s linked-to page. Contact us Constituents submit comments or requests using the Contact Us page of the Governor&amp;rsquo;s website, https://governor.hawaii.gov/contact-us/.
+The Contact Us webpage contains several tiles.">
+<meta property="og:title" content="Contact Us" />
+<meta property="og:description" content="This will show how to add or remove tiles from the Contact Us page.
+Add tile
+Open the Contact Us edit page. Add code for new tile. Enable the tile&rsquo;s linked-to page. Remove tile
+Open the Contact Us edit page. Delete the tile code. Disable the tile&rsquo;s linked-to page. Contact us Constituents submit comments or requests using the Contact Us page of the Governor&rsquo;s website, https://governor.hawaii.gov/contact-us/.
+The Contact Us webpage contains several tiles." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/website/contactus/" /><meta property="article:section" content="docs" />
+
+<meta property="og:site_name" content="GovDocs" />
+
+<meta itemprop="name" content="Contact Us">
+<meta itemprop="description" content="This will show how to add or remove tiles from the Contact Us page.
+Add tile
+Open the Contact Us edit page. Add code for new tile. Enable the tile&rsquo;s linked-to page. Remove tile
+Open the Contact Us edit page. Delete the tile code. Disable the tile&rsquo;s linked-to page. Contact us Constituents submit comments or requests using the Contact Us page of the Governor&rsquo;s website, https://governor.hawaii.gov/contact-us/.
+The Contact Us webpage contains several tiles.">
+
+<meta itemprop="wordCount" content="1452">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Contact Us"/>
+<meta name="twitter:description" content="This will show how to add or remove tiles from the Contact Us page.
+Add tile
+Open the Contact Us edit page. Add code for new tile. Enable the tile&rsquo;s linked-to page. Remove tile
+Open the Contact Us edit page. Delete the tile code. Disable the tile&rsquo;s linked-to page. Contact us Constituents submit comments or requests using the Contact Us page of the Governor&rsquo;s website, https://governor.hawaii.gov/contact-us/.
+The Contact Us webpage contains several tiles."/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.b7a39eca288f3519de4aa11dc413ec657262fc95b972b7f6fdbb62236ed8f4f7.css" as="style">
+<link href="/scss/main.min.b7a39eca288f3519de4aa11dc413ec657262fc95b972b7f6fdbb62236ed8f4f7.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">GovDocs</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/docs/"><i class='fab fa-stack-overflow'></i><span class="active">Documentation</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/docs/govcrm/"><span>GovCRM</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/docs/website/"><span class="active">Website</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/docs/developer/"><span>Development</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.192812ea7f5696f844278d541dec5f1e.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+
+  </div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.192812ea7f5696f844278d541dec5f1e.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrm-li">
+  <a href="/docs/govcrm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrm"><span class="">GovCRM</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmboard-li">
+  <a href="/docs/govcrm/board/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboard"><span class="">Boards</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmboardboards-li">
+  <a href="/docs/govcrm/board/boards/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboardboards"><span class="">Boards Data</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardboardsdepartments-li">
+  <a href="/docs/govcrm/board/boards/departments/" title="Boards Department Codes" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardboardsdepartments"><span class="">Departments</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardseats-li">
+  <a href="/docs/govcrm/board/seats/" title="Board Seats" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardseats"><span class="">Seats</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardmembers-li">
+  <a href="/docs/govcrm/board/members/" title="Board Members" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardmembers"><span class="">Members</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardapplications-li">
+  <a href="/docs/govcrm/board/applications/" title="Board Applications" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardapplications"><span class="">Applications</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardworkflow-li">
+  <a href="/docs/govcrm/board/workflow/" title="Workflow" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboardworkflow"><span class="">How To</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardreports-li">
+  <a href="/docs/govcrm/board/reports/" title="Board Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardreports"><span class="">Reports</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmcasework-li">
+  <a href="/docs/govcrm/casework/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcasework"><span class="">Casework</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcaseworkworklist-li">
+  <a href="/docs/govcrm/casework/worklist/" title="Casework" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcaseworkworklist"><span class="">Casework List</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcaseworkreports-li">
+  <a href="/docs/govcrm/casework/reports/" title="Casework Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcaseworkreports"><span class="">Reports</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmconfig-li">
+  <a href="/docs/govcrm/config/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfig"><span class="">Config</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfigagency-li">
+  <a href="/docs/govcrm/config/agency/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfigagency"><span class="">Agencies</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfigemailtemplate-li">
+  <a href="/docs/govcrm/config/emailtemplate/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfigemailtemplate"><span class="">Email Templates</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfiguser-li">
+  <a href="/docs/govcrm/config/user/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfiguser"><span class="">Users</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcontact-li">
+  <a href="/docs/govcrm/contact/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcontact"><span class="">Contacts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmemails-li">
+  <a href="/docs/govcrm/emails/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmemails"><span class="">Emails</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmevent-li">
+  <a href="/docs/govcrm/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmevent"><span class="">Events</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventais-li">
+  <a href="/docs/govcrm/event/ais/" title="Advance Information Sheet" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventais"><span class="">AIS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventcontactus-li">
+  <a href="/docs/govcrm/event/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventcontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventeventdata-li">
+  <a href="/docs/govcrm/event/eventdata/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventeventdata"><span class="">Data</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventworkflow-li">
+  <a href="/docs/govcrm/event/workflow/" title="Edit Events" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventworkflow"><span class="">Edit Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventemails-li">
+  <a href="/docs/govcrm/event/emails/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventemails"><span class="">Emails</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmflag-li">
+  <a href="/docs/govcrm/flag/" title="Flags Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflag"><span class="">Flag Requests</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagworkflow-li">
+  <a href="/docs/govcrm/flag/workflow/" title="GovCRM Flag Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagworkflow"><span class="">GovCRM</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagcontactus-li">
+  <a href="/docs/govcrm/flag/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagcontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagflagdata-li">
+  <a href="/docs/govcrm/flag/flagdata/" title="Flag Request Data Definition" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagflagdata"><span class="">Data Definition</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmlegislative-li">
+  <a href="/docs/govcrm/legislative/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmlegislative"><span class="">Legislation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmmeeting-li">
+  <a href="/docs/govcrm/meeting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmmeeting"><span class="">Meetings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmproclamation-li">
+  <a href="/docs/govcrm/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamation"><span class="">Proclamations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmproclamationcontactus-li">
+  <a href="/docs/govcrm/proclamation/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamationcontactus"><span class="">Contact Us</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactusmessage-li">
+  <a href="/docs/govcrm/proclamation/contactus/message/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactusmessage"><span class="">Commemorative Message</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactuswithevent-li">
+  <a href="/docs/govcrm/proclamation/contactus/withevent/" title="Commemorative Message with Event" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactuswithevent"><span class="">Message with Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactusmilitary-li">
+  <a href="/docs/govcrm/proclamation/contactus/military/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactusmilitary"><span class="">Military Retirement Message</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationroles-li">
+  <a href="/docs/govcrm/proclamation/roles/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamationroles"><span class="">Roles</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmsecurity-li">
+  <a href="/docs/govcrm/security/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmsecurity"><span class="">Security</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmappuser-li">
+  <a href="/docs/govcrm/appuser/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmappuser"><span class="">Users</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docswebsite-li">
+  <a href="/docs/website/" title="Governor&#39;s Website" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswebsite"><span class="">Website</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswebsitebills-li">
+  <a href="/docs/website/bills/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitebills"><span class="">Acts and Vetoes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswebsitebillssigned-li">
+  <a href="/docs/website/billssigned/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitebillssigned"><span class="">Bills Signed</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docswebsitecontactus-li">
+  <a href="/docs/website/contactus/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docswebsitecontactus"><span class="td-sidebar-nav-active-item">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswebsitenewsletter-li">
+  <a href="/docs/website/newsletter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitenewsletter"><span class="">Newsletter Archive</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswebsitehomepageslider-li">
+  <a href="/docs/website/homepageslider/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitehomepageslider"><span class="">Sliders</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docswebsitetoppriorities-li">
+  <a href="/docs/website/toppriorities/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswebsitetoppriorities"><span class="">Top Priorites</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloper-li">
+  <a href="/docs/developer/" title="Developer Information" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloper"><span class="">Development</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperboard-li">
+  <a href="/docs/developer/board/" title="Boards and Commissions" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperboard"><span class="">Boards</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperboarddatabase-li">
+  <a href="/docs/developer/board/database/" title="Boards Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperboarddatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopercasework-li">
+  <a href="/docs/developer/casework/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercasework"><span class="">Casework</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopercaseworkdatabase-li">
+  <a href="/docs/developer/casework/database/" title="Casework Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercaseworkdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopercontact-li">
+  <a href="/docs/developer/contact/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercontact"><span class="">Contacts</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopercontactdatabase-li">
+  <a href="/docs/developer/contact/database/" title="Contact Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopercontactdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperemail-li">
+  <a href="/docs/developer/email/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperemail"><span class="">Email Templates</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperemaildatabase-li">
+  <a href="/docs/developer/email/database/" title="Email Template Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperemaildatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperevent-li">
+  <a href="/docs/developer/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperevent"><span class="">Events</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperflag-li">
+  <a href="/docs/developer/flag/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperflag"><span class="">Flag Requests</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperflagdatabase-li">
+  <a href="/docs/developer/flag/database/" title="Flag Request Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperflagdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopermeeting-li">
+  <a href="/docs/developer/meeting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopermeeting"><span class="">Meetings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopermeetingdatabase-li">
+  <a href="/docs/developer/meeting/database/" title="Meetings Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopermeetingdatabase"><span class="">Database</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopermeetinginitialize-li">
+  <a href="/docs/developer/meeting/initialize/" title="Start Up Data" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopermeetinginitialize"><span class="">Initialization</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperproclamation-li">
+  <a href="/docs/developer/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperproclamation"><span class="">Proclamations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperproclamationdatabase-li">
+  <a href="/docs/developer/proclamation/database/" title="Proclamations Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperproclamationdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperappuser-li">
+  <a href="/docs/developer/appuser/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperappuser"><span class="">Users</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperappuserdatabase-li">
+  <a href="/docs/developer/appuser/database/" title="Users and Roles Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdeveloperappuserdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopergravityforms-li">
+  <a href="/docs/developer/gravityforms/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityforms"><span class="">Gravity Forms</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsais-li">
+  <a href="/docs/developer/gravityforms/ais/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsais"><span class="">Advance Information Sheet</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsjudicial-li">
+  <a href="/docs/developer/gravityforms/judicial/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsjudicial"><span class="">Comments on Judicial Nominees</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformslegislation-li">
+  <a href="/docs/developer/gravityforms/legislation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformslegislation"><span class="">Comments on Legislation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsflevent-li">
+  <a href="/docs/developer/gravityforms/flevent/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsflevent"><span class="">Invite the First Lady to an Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsevent-li">
+  <a href="/docs/developer/gravityforms/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsevent"><span class="">Invite the Governor to an Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsproclamation-li">
+  <a href="/docs/developer/gravityforms/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsproclamation"><span class="">Request a Proclamation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsbillsigning-li">
+  <a href="/docs/developer/gravityforms/billsigning/" title="Bill Signing Ceremony Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsbillsigning"><span class="">Bill Signing Requests</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformscontactthefirstlady-li">
+  <a href="/docs/developer/gravityforms/contactthefirstlady/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformscontactthefirstlady"><span class="">Contact the First Lady</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperreports-li">
+  <a href="/docs/developer/reports/" title="Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperreports"><span class="">Report</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperwebjob-li">
+  <a href="/docs/developer/webjob/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperwebjob"><span class="">WebJob</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperwebjobprojectcode-li">
+  <a href="/docs/developer/webjob/projectcode/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdeveloperwebjobprojectcode"><span class="">Project Code</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperdatabase-li">
+  <a href="/docs/developer/database/" title="Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperdatabase"><span class="">Database Initialization</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergraph-li">
+  <a href="/docs/developer/graph/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergraph"><span class="">Graph</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperinit-li">
+  <a href="/docs/developer/init/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperinit"><span class="">Initial Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopernewadministration-li">
+  <a href="/docs/developer/newadministration/" title="New Governor" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopernewadministration"><span class="">New Administration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperdocumentation-li">
+  <a href="/docs/developer/documentation/" title="This documentation project" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperdocumentation"><span class="">This Documentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopertest-li">
+  <a href="/docs/developer/test/" title="TEST" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopertest"><span class="">Test</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#contact-us">Contact us</a></li>
+    <li><a href="#wordpress-pages">WordPress pages</a></li>
+    <li><a href="#how-to-add-a-new-tile">How to add a new tile</a></li>
+    <li><a href="#enable-the-linked-page">Enable the linked page</a></li>
+    <li><a href="#how-to-remove-a-tile">How to remove a tile</a></li>
+    <li><a href="#disable-the-linked-page-after-deleting-tile">Disable the linked page after deleting tile</a></li>
+    <li><a href="#too-many-tiles">Too Many Tiles</a></li>
+    <li><a href="#new-tile-design">New tile design</a></li>
+    <li><a href="#notes">Notes</a></li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+	
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/docs/website/">Website</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="/docs/website/contactus/" aria-disabled="true" class="btn-link disabled">Contact Us</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Contact Us</h1>
+	
+	<header class="article-meta">
+		
+
+  
+    
+      
+
+
+    
+      
+
+
+    
+  
+
+		
+	</header>    
+	<p>This will show how to add or remove tiles from the <em>Contact Us</em> page.</p>
+<p>Add tile</p>
+<ul>
+<li>Open the <em>Contact Us</em> edit page.</li>
+<li>Add code for new tile.</li>
+<li>Enable the tile&rsquo;s linked-to page.</li>
+</ul>
+<p>Remove tile</p>
+<ul>
+<li>Open the <em>Contact Us</em> edit page.</li>
+<li>Delete the tile code.</li>
+<li>Disable the tile&rsquo;s linked-to page.</li>
+</ul>
+<h2 id="contact-us">Contact us</h2>
+<p>Constituents submit comments or requests using the <em>Contact Us</em> page of the Governor&rsquo;s website, <a href="https://governor.hawaii.gov/contact-us/">https://governor.hawaii.gov/contact-us/</a>.</p>
+<p>The <em>Contact Us</em> webpage contains several tiles. The number of tiles will vary, depending on the needs of the office. This image shows 9 tiles. Sometimes there are 8 tiles, other times there are 10 tiles.</p>
+<img src="contactus_page.png" title="Contact Us webpage" alt="screen print of Contact Us webpage">
+<h2 id="wordpress-pages">WordPress pages</h2>
+<p>Open WordPress. Click the <img src="wp_pages_menuitem.png" alt="wordpress Pages left-menu item"> left-menu item to open the list of WordPress pages. There are over 100 pages. Click the image of next page button next-page button (highlighted yellow below) until you see <em>Contact Us</em> in the list.</p>
+<p>To add or remove a tile, we edit the <em>Contact Us</em> page. Click the <em>Contact Us</em> title to open the editing page. The page ID is 14.</p>
+<p><img src="wp_pages_list_contactus.avif" alt="list of wordpress pages"></p>
+<h2 id="how-to-add-a-new-tile">How to add a new tile</h2>
+<p>To add a new tile, add code to the existing <em>Contact Us</em> content.</p>
+<p><img src="wp_contactus_edit_page_before.avif" alt="wordpress contact us edit page"></p>
+<br>
+<p>This is the <em>before</em> content for 8 tiles.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/contact-the-governor/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>CONTACT THE GOVERNOR<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-envelope&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>With your concerns or comments.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/request-a-proclamation/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>REQUEST A COMMEMORATIVE MESSAGE<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-bookmark-empty&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>To recognize an occasion, organization or individual.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/request-a-meeting/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>REQUEST A MEETING<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-time&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>For a personal meeting, group or media interview.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/invite-the-governor-to-an-event/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>INVITE THE GOVERNOR TO AN EVENT<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-calendar&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Request the Governor to attend your event.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/hawaii-state-capitol-tours/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>STATE CAPITOL TOURS<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-bullhorn&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Tour information<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/submit-a-flag-request/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>SUBMIT A FLAG REQUEST<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-flag&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>To fly your flag above the Capitol and receive a Certificate of Authenticity.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/uipa-request/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>UIPA REQUEST<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-file-text&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Information to make a Uniform Information Practices Act request.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/general-contact-information/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>GENERAL INFORMATION<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-info-sign&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>General contact details and links to related sites.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;clearfix&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><p>In this example, add the following <em>Comments on Legislation</em> tile code into the <img src="newcode.png" alt="new code label"> area.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;http://governor.hawaii.gov/contact-us/comments-on-legislation/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>COMMENTS ON LEGISLATION<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-legal&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Submit comments on legislation.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><p>Click the <img src="wp_preview_button.png" alt="preview button"> preview button to preview the updates. If the preview looks good, click the <img src="wp_update_button.png" alt="update button"> to publish the updates.</p>
+<p>The final result.</p>
+<p><img src="contactus_9tiles_l_page.avif" alt="9 tiles arranged oddly"></p>
+<br>
+<p>The result has the tiles arranged oddly. We can make the arrangement nicer by adding the following code to the page content at the <img src="newcode.png" alt="new code label"> area. This <em>style</em> code must appear before the tile code.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">style</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">@</span><span style="color:#204a87;font-weight:bold">media</span> <span style="color:#204a87;font-weight:bold">only</span> <span style="color:#204a87;font-weight:bold">screen</span> <span style="color:#204a87;font-weight:bold">and</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">min-width</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">767px</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">contact-btn</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#204a87;font-weight:bold">width</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">309</span><span style="color:#204a87;font-weight:bold">px</span> <span style="color:#8f5902;font-style:italic">!important</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">height</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">180</span><span style="color:#204a87;font-weight:bold">px</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000;font-weight:bold">}</span> <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#ce5c00;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">style</span><span style="color:#ce5c00;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><p><img src="wp_contactus_edit_page_after.avif" alt="contact edit page with 9 tiles"></p>
+<p>This is the <em>after</em> content for 9 tiles.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">style</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">@</span><span style="color:#204a87;font-weight:bold">media</span> <span style="color:#204a87;font-weight:bold">only</span> <span style="color:#204a87;font-weight:bold">screen</span> <span style="color:#204a87;font-weight:bold">and</span> <span style="color:#ce5c00;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">min-width</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#204a87;font-weight:bold">767px</span><span style="color:#ce5c00;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#000;font-weight:bold">.</span><span style="color:#000">contact-btn</span> <span style="color:#000;font-weight:bold">{</span> <span style="color:#204a87;font-weight:bold">width</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">309</span><span style="color:#204a87;font-weight:bold">px</span> <span style="color:#8f5902;font-style:italic">!important</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#204a87;font-weight:bold">height</span><span style="color:#000;font-weight:bold">:</span> <span style="color:#0000cf;font-weight:bold">180</span><span style="color:#204a87;font-weight:bold">px</span><span style="color:#000;font-weight:bold">;</span> <span style="color:#000;font-weight:bold">}</span> <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">style</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/comments-on-legislation/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>COMMENTS ON LEGISLATION<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-legal&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Submit comments on legislation.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/contact-the-governor/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>CONTACT THE GOVERNOR<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-envelope&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>With your concerns or comments.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/request-a-proclamation/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>REQUEST A COMMEMORATIVE MESSAGE<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-bookmark-empty&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>To recognize an occasion, organization or individual.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/request-a-meeting/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>REQUEST A MEETING<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-time&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>For a personal meeting, group or media interview.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/invite-the-governor-to-an-event/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>INVITE THE GOVERNOR TO AN EVENT<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-calendar&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Request the Governor to attend your event.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/hawaii-state-capitol-tours/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>STATE CAPITOL TOURS<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-bullhorn&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Tour information<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/submit-a-flag-request/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>SUBMIT A FLAG REQUEST<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-flag&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>To fly your flag above the Capitol and receive a Certificate of Authenticity.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/uipa-request/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>UIPA REQUEST<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-file-text&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Information to make a Uniform Information Practices Act request.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/general-contact-information/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>GENERAL INFORMATION<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-info-sign&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>General contact details and links to related sites.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;clearfix&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><p>After adding the <em>style</em> code, this is the <strong>final version</strong>.</p>
+<p><img src="contactus_9tiles_page.avif" alt="9 tiles nicely arranged"></p>
+<h2 id="enable-the-linked-page">Enable the linked page</h2>
+<p>If clicking a tile opens a WordPress page, you must change the page&rsquo;s visibility to public. If you fail to change the visibility, you&rsquo;ll get a 404 <em>page not found</em> error.</p>
+<p><img src="legislation_page_notfound.avif" alt="404" title="if the wordpress page visibility is not set to public, you'll get a 404 page not found error"></p>
+<p>The page visibility value determines if a page may be viewed by the public. The next image shows the page visibility is set to private. If a page&rsquo;s visibility is set to private, the public cannot see the page and will get a 404 <em>page not found</em> error.</p>
+<p><img src="wp_legislation_visibility_private.avif" alt="visibility"></p>
+<br>
+<p>To make a page available to the public, set the page&rsquo;s visibility to <strong>public</strong>. Click <img src="visibility_edit_button.png" alt="edit"> Edit.</p>
+<p>Click Edit.
+<img src="visibility_edit_step1.avif" alt="click edit"></p>
+<p>Check Public.
+<img src="visibility_edit_step2.avif" alt="click public"></p>
+<p>Click OK.
+<img src="visibility_edit_step3.avif" alt="click ok"></p>
+<p>Click Update.
+<img src="visibility_edit_step4.avif" alt="click update"></p>
+<p>The page visibility is now set to public. The public can see the page.</p>
+<p><img src="legislation_page.avif" alt="comments on legislation page"></p>
+<h2 id="how-to-remove-a-tile">How to remove a tile</h2>
+<p>In this example, we will remove the first tile in the image below, the <em>Comments Regarding Judicial Nominees</em> tile.</p>
+<p><img src="contactus_remove_cut.avif" alt="Contact Us with scissors over the first tile" title="remove tile"></p>
+<br>
+<p>To remove the first tile, delete the code in the red box shown below.</p>
+<p>Then click the <img src="wp_preview_button.png" alt="preview button"> preview button.</p>
+<p><img src="wp_contactus_edit_page_remove_redbox.avif" alt="wordpress edit contact us page redboxed"></p>
+<br>
+<p>The tiles will re-arrange themselves. The result is the image below. The tiles are not aligned nicely. Let&rsquo;s do more editing to fix that.</p>
+<p><img src="contactus_remove_8tiles_notaligned.avif" alt="Contact Us with 8 unaligned tiles" title="8 unaligned tiles"></p>
+<br>
+<p>To prettify the page and align the tiles, delete the CSS code in the red box shown below. <code>This CSS code overrides the CSS in the theme file *styles.css*. By removing this CSS, the webpage reverts back to the theme's default CSS. The default CSS has thinner and taller tiles</code>.</p>
+<p>Click the <img src="wp_preview_button.png" alt="preview button"> preview button. If the page looks good, click the <img src="wp_update_button.png" alt="update button"> update button.</p>
+<p><img src="wp_contactus_edit_page_remove_redbox_css.avif" alt="wordpress edit contact us page css redboxed"></p>
+<br>
+<p>The result is the image below.</p>
+<p><img src="contactus_remove_8tiles_aligned.avif" alt="Contact Us with 8 aligned tiles" title="8 aligned tiles"></p>
+<br>
+<p>The final <em>Contact Us</em> content with 8 tiles aligned nicely.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/contact-the-governor/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>CONTACT THE GOVERNOR<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-envelope&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>With your concerns or comments.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/request-a-proclamation/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>REQUEST A COMMEMORATIVE MESSAGE<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-bookmark-empty&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>To recognize an occasion, organization or individual.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/request-a-meeting/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>REQUEST A MEETING<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-time&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>For a personal meeting, group or media interview.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/invite-the-governor-to-an-event/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>INVITE THE GOVERNOR TO AN EVENT<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-calendar&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Request the Governor to attend your event.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/hawaii-state-capitol-tours/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>STATE CAPITOL TOURS<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-bullhorn&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Tour information<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/submit-a-flag-request/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>SUBMIT A FLAG REQUEST<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-flag&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>To fly your flag above the Capitol and receive a Certificate of Authenticity.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/uipa-request/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>UIPA REQUEST<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-file-text&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>Information to make a Uniform Information Practices Act request.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">a</span> <span style="color:#c4a000">href</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://governor.hawaii.gov/contact-us/general-contact-information/&#34;</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;four-col contact-btn hvr-float&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-title&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>GENERAL INFORMATION<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;</span><span style="color:#204a87;font-weight:bold">i</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;icon_large icon-info-sign&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">i</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;btn-desc&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>General contact details and links to related sites.<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">a</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">class</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;clearfix&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</span></span></code></pre></div><h2 id="disable-the-linked-page-after-deleting-tile">Disable the linked page after deleting tile</h2>
+<p>After deleting a tile, you may have to disable the linked-to page. The links are out in the wild and constituents have bookmarked the link and will navigate to the page. To disable a page, set the linked-to page visibility to private.</p>
+<p><img src="wp_judicial_edit_public.avif" alt="wordpress edit judicial comments page"></p>
+<p>Click Edit.
+<img src="visibility_edit_step4.avif" alt="click edit"></p>
+<p>Click Private.
+<img src="visibility_edit_step3.avif" alt="click public"></p>
+<p>Click OK.
+<img src="visibility_edit_step2.avif" alt="click ok"></p>
+<p>Click Update.
+<img src="visibility_edit_step1.avif" alt="click update"></p>
+<p>The page visibility is now set to private. The public cannot view the page.</p>
+<h2 id="too-many-tiles">Too Many Tiles</h2>
+<p>Sometimes, the needs of the office will required more than 9 tiles. When that happens, the tiles are difficult to line up. When that happens, we have a weird alignment of tiles. The aesthetics will be weird.</p>
+<p>Unbalanced alignment 1.</p>
+<p><img src="contactus_10tiles_wide_alignment.avif" alt="Contact Us with 10 unaligned tiles 3 across" title="10 unaligned tiles 3 across"></p>
+<p>Unbalanced alignment 2.</p>
+<p><img src="contactus_10tiles_thin_alignment.avif" alt="Contact Us with 10 unaligned tiles 4 across" title="10 unaligned tiles 4 across"></p>
+<p>2 rows with 5 tiles won&rsquo;t work because the tiles will be too skinny.</p>
+<h2 id="new-tile-design">New tile design</h2>
+<p>To create a new tile, you have to specify 4 parts. Here we look at the 4 parts of the <em>Comments on Legislation</em> tile.</p>
+<ol>
+<li>The bold red text is the destination URL when you click the tile.</li>
+</ol>
+<div style="font-family:monospace;border:1px solid gray;padding:3px;color:green;">
+<div>&lt;a href="<span style="color:red;font-weight:bold;font-size:1.2em;">http://governor.hawaii.gov/contact-us/comments-on-legislation/</span>" class="four-col contact-btn hvr-float"&gt;</div>
+<div>&lt;span class="btn-title"&gt;COMMENTS ON LEGISLATION&lt;/span&gt;</div>
+<div>&lt;i class="icon_large icon-legal"&gt;&lt;/i&gt;</div>
+<div>&lt;span class="btn-desc"&gt;Submit comments on legislation.&lt;/span&gt;</div>
+<div>&lt;/a&gt;</div>
+</div>
+<br>
+<ol start="2">
+<li>The bold red text is the large text on the upper part of the tile.</li>
+</ol>
+<div style="font-family:monospace;border:1px solid gray;padding:3px;color:green;">
+<div>&lt;a href="http://governor.hawaii.gov/contact-us/comments-on-legislation/" class="four-col contact-btn hvr-float"&gt;</div>
+<div>&lt;span class="btn-title"&gt;<span style="color:red;font-weight:bold;font-size:1.2em;">COMMENTS ON LEGISLATION</span>&lt;/span&gt;</div>
+<div>&lt;i class="icon_large icon-legal"&gt;&lt;/i&gt;</div>
+<div>&lt;span class="btn-desc"&gt;Submit comments on legislation.&lt;/span&gt;</div>
+<div>&lt;/a&gt;</div>
+</div>
+<br>
+<ol start="3">
+<li>The bold red text is an icon name. Some icons are listed at webpage <a href="https://governor.hawaii.gov/fonticons/">https://governor.hawaii.gov/fonticons/</a>.</li>
+</ol>
+<div style="font-family:monospace;border:1px solid gray;padding:3px;color:green;">
+<div>&lt;a href="http://governor.hawaii.gov/contact-us/comments-on-legislation/" class="four-col contact-btn hvr-float"&gt;</div>
+<div>&lt;span class="btn-title"&gt;COMMENTS ON LEGISLATION&lt;/span&gt;</div>
+<div>&lt;i class="icon_large <span style="color:red;font-weight:bold;font-size:1.2em;">icon-legal</span>"&gt;&lt;/i&gt;</div>
+<div>&lt;span class="btn-desc"&gt;Submit comments on legislation.&lt;/span&gt;</div>
+<div>&lt;/a&gt;</div>
+</div>
+<br>
+<ol start="4">
+<li>The bold red text is the smaller text at the bottom of the tile.</li>
+</ol>
+<div style="font-family:monospace;border:1px solid gray;padding:3px;color:green;">
+<div>&lt;a href="http://governor.hawaii.gov/contact-us/comments-on-legislation/" class="four-col contact-btn hvr-float"&gt;</div>
+<div>&lt;span class="btn-title"&gt;COMMENTS ON LEGISLATION&lt;/span&gt;</div>
+<div>&lt;i class="icon_large icon-legal"&gt;&lt;/i&gt;</div>
+<div>&lt;span class="btn-desc"&gt;<span style="color:red;font-weight:bold;font-size:1.2em;">Submit comments on legislation.</span>&lt;/span&gt;</div>
+<div>&lt;/a&gt;</div>
+</div>
+<h2 id="notes">Notes</h2>
+<p>To change the default CSS, select <em><strong>Appearance</strong></em> &gt; <em><strong>Theme Editor</strong></em>, select file <em><strong>style.css</strong></em>. <strong>DO NOT MODIFY THIS FILE OR ANY THEME FILE UNLESS YOU KNOW WHAT YOU ARE DOING; YOU CAN BREAK THE WEBSITE.</strong></p>
+<!--
+
+This is the default CSS in file *style.css* that we sometimes want to override.
+
+~~~css
+@media only screen and (min-width: 767px) {
+  .contact-btn {
+    width: 230px !important;
+    height: 212px;
+  }
+}
+~~~
+
+~~~html
+<div>
+
+<a href="https://governor.hawaii.gov/contact-us/comments-on-legislation/" class="four-col contact-btn hvr-float">
+<span class="btn-title">COMMENTS ON LEGISLATION</span><i class="icon_large icon-legal"></i>
+<span class="btn-desc">Submit comments on legislation.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/comments-on-legislation/" class="four-col contact-btn hvr-float">
+<span class="btn-title">COMMENTS ON LEGISLATION</span><i class="icon_large icon-legal"></i>
+<span class="btn-desc">Submit comments on legislation.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/contact-the-governor/" class="four-col contact-btn hvr-float">
+<span class="btn-title">CONTACT THE GOVERNOR</span><i class="icon_large icon-envelope"></i>
+<span class="btn-desc">For suggestions or concerns only.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/request-a-meeting/" class="four-col contact-btn hvr-float">
+<span class="btn-title">REQUEST A MEETING</span><i class="icon_large icon-time"></i>
+<span class="btn-desc">For a personal meeting, group or media interview.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/invite-the-governor-to-an-event/" class="four-col contact-btn hvr-float">
+<span class="btn-title">INVITE THE GOVERNOR TO AN EVENT</span><i class="icon_large icon-calendar"></i>
+<span class="btn-desc">Request the Governor to attend your event.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/request-a-proclamation/" class="four-col contact-btn hvr-float">
+<span class="btn-title">REQUEST A COMMEMORATIVE MESSAGE</span><i class="icon_large icon-bookmark-empty"></i>
+<span class="btn-desc">To recognize an occasion, organization or individual.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/hawaii-state-capitol-tours/" class="four-col contact-btn hvr-float">
+<span class="btn-title">SCHEDULE A STATE CAPITOL TOUR</span><i class="icon_large icon-bullhorn"></i>
+<span class="btn-desc">Guided and self-guided tours are welcomed to all at the State Capitol.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/submit-a-flag-request/" class="four-col contact-btn hvr-float">
+<span class="btn-title">SUBMIT A FLAG REQUEST</span><i class="icon_large icon-flag"></i>
+<span class="btn-desc">To fly your flag above the Capitol and receive a Certificate of Authenticity.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/uipa-request/" class="four-col contact-btn hvr-float">
+<span class="btn-title">UIPA REQUEST</span><i class="icon_large icon-file-text"></i>
+<span class="btn-desc">Information to make a Uniform Information Practices Act request</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/general-contact-information/" class="four-col contact-btn hvr-float">
+<span class="btn-title">GENERAL INFORMATION</span><i class="icon_large icon-info-sign"></i>
+<span class="btn-desc">General contact details and links to related sites.</span>
+</a>
+
+<a href="https://governor.hawaii.gov/contact-us/comments-regarding-judicial-nominees/" class="four-col contact-btn hvr-float">
+<span class="btn-title">COMMENTS ON JUDICIAL NOMINEES</span><i class="icon_large icon-legal"></i>
+<span class="btn-desc">Submit comments on judicial nominees</span></a>
+</a>
+
+</div>
+<div class="clearfix"></div>
+~~~
+
+-->
+<pre tabindex="0"><code>&lt;strong&gt;&lt;a href=&#34;https://governor.hawaii.gov/newsroom/office-of-the-governor-news-release-governor-ige-seeks-comment-son-judicial-nominees-for-oahu-maui-and-hawaii/&#34;&gt;LIST OF NOMINEES&lt;/a&gt;&lt;/strong&gt;
+
+&lt;u&gt;Members of the public are invited to submit comments regarding judicial nominees until &lt;strong&gt;Monday, October 4, 2021&lt;/strong&gt;.&lt;/u&gt;
+
+[gravityform id=&#34;27&#34; title=&#34;false&#34; description=&#34;true&#34;]
+</code></pre>
+	
+	
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GovCRM" aria-label="GovCRM">
+    <a class="text-white" target="_blank" rel="noopener" href="https://govcrm.hawaii.gov" aria-label="GovCRM">
+      <i class="fab fa-microsoft"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Governor&#39;s website" aria-label="Governor&#39;s website">
+    <a class="text-white" target="_blank" rel="noopener" href="https://governor.hawaii.gov" aria-label="Governor&#39;s website">
+      <i class="fa fa-globe"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+  <script src="/js/main.min.2aff983e9d0d8ecff9ed53e14b657216e2d8d2aff059bf4a5651283020995f1b.js" integrity="sha256-Kv&#43;YPp0Njs/57VPhS2VyFuLY0q/wWb9KVlEoMCCZXxs=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

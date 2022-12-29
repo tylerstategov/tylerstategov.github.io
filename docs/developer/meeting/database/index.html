@@ -1,0 +1,523 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.107.0">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Meetings Database | GovDocs</title>
+<meta name="description" content=" workPKworkidworktypereceiveddatesourceworknamemsgtypemessagedescriptiondiscussionaddinfoeventdate1eventdate2eventdate3data1data2islandservicenoteassignedassigneddatebatchcloseddateclosedreasonduedatestatusstatusdateexternalidcreateusercreatedatemodifyusermodifydaterecordstatedata9orgidrefidcaseidevntidprocid workcontactPKidFKworkidFKcontactidstatuscreateusercreatedatemodifyusermodifydaterecordstateprevcontactid workactPKidFKworkidstatusdescriptionduedateemailcontactidactivecreateusercreatedatemodifyusermodifydaterecordstateuserid contactPKcontactidcontacttypelastnamefirstnamemiddlenameprefixsuffixappellationsalutationgenderbirthdateislandmergedtoexternalidcreateusercreatedatemodifyusermodifydaterecordstatefrequentwriterorgnamewebsiteconstituentid meetingdeptPKagencycodeagencynamedescriptionstatusreplyto meetingcontactPKidFKagencycodecontactidlastnamefirstnametitleemailreplytostatuscreateusercreatedatemodifyusermodifydaterecordstate ">
+<meta property="og:title" content="Meetings Database" />
+<meta property="og:description" content=" workPKworkidworktypereceiveddatesourceworknamemsgtypemessagedescriptiondiscussionaddinfoeventdate1eventdate2eventdate3data1data2islandservicenoteassignedassigneddatebatchcloseddateclosedreasonduedatestatusstatusdateexternalidcreateusercreatedatemodifyusermodifydaterecordstatedata9orgidrefidcaseidevntidprocid workcontactPKidFKworkidFKcontactidstatuscreateusercreatedatemodifyusermodifydaterecordstateprevcontactid workactPKidFKworkidstatusdescriptionduedateemailcontactidactivecreateusercreatedatemodifyusermodifydaterecordstateuserid contactPKcontactidcontacttypelastnamefirstnamemiddlenameprefixsuffixappellationsalutationgenderbirthdateislandmergedtoexternalidcreateusercreatedatemodifyusermodifydaterecordstatefrequentwriterorgnamewebsiteconstituentid meetingdeptPKagencycodeagencynamedescriptionstatusreplyto meetingcontactPKidFKagencycodecontactidlastnamefirstnametitleemailreplytostatuscreateusercreatedatemodifyusermodifydaterecordstate " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/docs/developer/meeting/database/" /><meta property="article:section" content="docs" />
+
+<meta property="og:site_name" content="GovDocs" />
+
+<meta itemprop="name" content="Meetings Database">
+<meta itemprop="description" content=" workPKworkidworktypereceiveddatesourceworknamemsgtypemessagedescriptiondiscussionaddinfoeventdate1eventdate2eventdate3data1data2islandservicenoteassignedassigneddatebatchcloseddateclosedreasonduedatestatusstatusdateexternalidcreateusercreatedatemodifyusermodifydaterecordstatedata9orgidrefidcaseidevntidprocid workcontactPKidFKworkidFKcontactidstatuscreateusercreatedatemodifyusermodifydaterecordstateprevcontactid workactPKidFKworkidstatusdescriptionduedateemailcontactidactivecreateusercreatedatemodifyusermodifydaterecordstateuserid contactPKcontactidcontacttypelastnamefirstnamemiddlenameprefixsuffixappellationsalutationgenderbirthdateislandmergedtoexternalidcreateusercreatedatemodifyusermodifydaterecordstatefrequentwriterorgnamewebsiteconstituentid meetingdeptPKagencycodeagencynamedescriptionstatusreplyto meetingcontactPKidFKagencycodecontactidlastnamefirstnametitleemailreplytostatuscreateusercreatedatemodifyusermodifydaterecordstate ">
+
+<meta itemprop="wordCount" content="6">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Meetings Database"/>
+<meta name="twitter:description" content=" workPKworkidworktypereceiveddatesourceworknamemsgtypemessagedescriptiondiscussionaddinfoeventdate1eventdate2eventdate3data1data2islandservicenoteassignedassigneddatebatchcloseddateclosedreasonduedatestatusstatusdateexternalidcreateusercreatedatemodifyusermodifydaterecordstatedata9orgidrefidcaseidevntidprocid workcontactPKidFKworkidFKcontactidstatuscreateusercreatedatemodifyusermodifydaterecordstateprevcontactid workactPKidFKworkidstatusdescriptionduedateemailcontactidactivecreateusercreatedatemodifyusermodifydaterecordstateuserid contactPKcontactidcontacttypelastnamefirstnamemiddlenameprefixsuffixappellationsalutationgenderbirthdateislandmergedtoexternalidcreateusercreatedatemodifyusermodifydaterecordstatefrequentwriterorgnamewebsiteconstituentid meetingdeptPKagencycodeagencynamedescriptionstatusreplyto meetingcontactPKidFKagencycodecontactidlastnamefirstnametitleemailreplytostatuscreateusercreatedatemodifyusermodifydaterecordstate "/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.b7a39eca288f3519de4aa11dc413ec657262fc95b972b7f6fdbb62236ed8f4f7.css" as="style">
+<link href="/scss/main.min.b7a39eca288f3519de4aa11dc413ec657262fc95b972b7f6fdbb62236ed8f4f7.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-page">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">GovDocs</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/docs/"><i class='fab fa-stack-overflow'></i><span class="active">Documentation</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/docs/govcrm/"><span>GovCRM</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/docs/website/"><span>Website</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/docs/developer/"><span class="active">Development</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.192812ea7f5696f844278d541dec5f1e.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+
+  </div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.192812ea7f5696f844278d541dec5f1e.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrm-li">
+  <a href="/docs/govcrm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrm"><span class="">GovCRM</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmboard-li">
+  <a href="/docs/govcrm/board/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboard"><span class="">Boards</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmboardboards-li">
+  <a href="/docs/govcrm/board/boards/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboardboards"><span class="">Boards Data</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardboardsdepartments-li">
+  <a href="/docs/govcrm/board/boards/departments/" title="Boards Department Codes" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardboardsdepartments"><span class="">Departments</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardseats-li">
+  <a href="/docs/govcrm/board/seats/" title="Board Seats" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardseats"><span class="">Seats</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardmembers-li">
+  <a href="/docs/govcrm/board/members/" title="Board Members" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardmembers"><span class="">Members</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardapplications-li">
+  <a href="/docs/govcrm/board/applications/" title="Board Applications" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardapplications"><span class="">Applications</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardworkflow-li">
+  <a href="/docs/govcrm/board/workflow/" title="Workflow" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboardworkflow"><span class="">How To</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardreports-li">
+  <a href="/docs/govcrm/board/reports/" title="Board Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardreports"><span class="">Reports</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmcasework-li">
+  <a href="/docs/govcrm/casework/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcasework"><span class="">Casework</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcaseworkworklist-li">
+  <a href="/docs/govcrm/casework/worklist/" title="Casework" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcaseworkworklist"><span class="">Casework List</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcaseworkreports-li">
+  <a href="/docs/govcrm/casework/reports/" title="Casework Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcaseworkreports"><span class="">Reports</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmconfig-li">
+  <a href="/docs/govcrm/config/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfig"><span class="">Config</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfigagency-li">
+  <a href="/docs/govcrm/config/agency/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfigagency"><span class="">Agencies</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfigemailtemplate-li">
+  <a href="/docs/govcrm/config/emailtemplate/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfigemailtemplate"><span class="">Email Templates</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfiguser-li">
+  <a href="/docs/govcrm/config/user/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfiguser"><span class="">Users</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcontact-li">
+  <a href="/docs/govcrm/contact/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcontact"><span class="">Contacts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmemails-li">
+  <a href="/docs/govcrm/emails/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmemails"><span class="">Emails</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmevent-li">
+  <a href="/docs/govcrm/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmevent"><span class="">Events</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventais-li">
+  <a href="/docs/govcrm/event/ais/" title="Advance Information Sheet" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventais"><span class="">AIS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventcontactus-li">
+  <a href="/docs/govcrm/event/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventcontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventeventdata-li">
+  <a href="/docs/govcrm/event/eventdata/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventeventdata"><span class="">Data</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventworkflow-li">
+  <a href="/docs/govcrm/event/workflow/" title="Edit Events" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventworkflow"><span class="">Edit Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventemails-li">
+  <a href="/docs/govcrm/event/emails/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventemails"><span class="">Emails</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmflag-li">
+  <a href="/docs/govcrm/flag/" title="Flags Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflag"><span class="">Flag Requests</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagworkflow-li">
+  <a href="/docs/govcrm/flag/workflow/" title="GovCRM Flag Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagworkflow"><span class="">GovCRM</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagcontactus-li">
+  <a href="/docs/govcrm/flag/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagcontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagflagdata-li">
+  <a href="/docs/govcrm/flag/flagdata/" title="Flag Request Data Definition" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagflagdata"><span class="">Data Definition</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmlegislative-li">
+  <a href="/docs/govcrm/legislative/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmlegislative"><span class="">Legislation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmmeeting-li">
+  <a href="/docs/govcrm/meeting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmmeeting"><span class="">Meetings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmproclamation-li">
+  <a href="/docs/govcrm/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamation"><span class="">Proclamations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmproclamationcontactus-li">
+  <a href="/docs/govcrm/proclamation/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamationcontactus"><span class="">Contact Us</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactusmessage-li">
+  <a href="/docs/govcrm/proclamation/contactus/message/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactusmessage"><span class="">Commemorative Message</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactuswithevent-li">
+  <a href="/docs/govcrm/proclamation/contactus/withevent/" title="Commemorative Message with Event" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactuswithevent"><span class="">Message with Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactusmilitary-li">
+  <a href="/docs/govcrm/proclamation/contactus/military/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactusmilitary"><span class="">Military Retirement Message</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationroles-li">
+  <a href="/docs/govcrm/proclamation/roles/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamationroles"><span class="">Roles</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmsecurity-li">
+  <a href="/docs/govcrm/security/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmsecurity"><span class="">Security</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmappuser-li">
+  <a href="/docs/govcrm/appuser/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmappuser"><span class="">Users</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswebsite-li">
+  <a href="/docs/website/" title="Governor&#39;s Website" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswebsite"><span class="">Website</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitebills-li">
+  <a href="/docs/website/bills/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitebills"><span class="">Acts and Vetoes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitebillssigned-li">
+  <a href="/docs/website/billssigned/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitebillssigned"><span class="">Bills Signed</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitecontactus-li">
+  <a href="/docs/website/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitecontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitenewsletter-li">
+  <a href="/docs/website/newsletter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitenewsletter"><span class="">Newsletter Archive</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitehomepageslider-li">
+  <a href="/docs/website/homepageslider/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitehomepageslider"><span class="">Sliders</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitetoppriorities-li">
+  <a href="/docs/website/toppriorities/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswebsitetoppriorities"><span class="">Top Priorites</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdeveloper-li">
+  <a href="/docs/developer/" title="Developer Information" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloper"><span class="">Development</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloperboard-li">
+  <a href="/docs/developer/board/" title="Boards and Commissions" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperboard"><span class="">Boards</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperboarddatabase-li">
+  <a href="/docs/developer/board/database/" title="Boards Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperboarddatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdevelopercasework-li">
+  <a href="/docs/developer/casework/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercasework"><span class="">Casework</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopercaseworkdatabase-li">
+  <a href="/docs/developer/casework/database/" title="Casework Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercaseworkdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdevelopercontact-li">
+  <a href="/docs/developer/contact/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercontact"><span class="">Contacts</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopercontactdatabase-li">
+  <a href="/docs/developer/contact/database/" title="Contact Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopercontactdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloperemail-li">
+  <a href="/docs/developer/email/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperemail"><span class="">Email Templates</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperemaildatabase-li">
+  <a href="/docs/developer/email/database/" title="Email Template Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperemaildatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeveloperevent-li">
+  <a href="/docs/developer/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperevent"><span class="">Events</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloperflag-li">
+  <a href="/docs/developer/flag/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperflag"><span class="">Flag Requests</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperflagdatabase-li">
+  <a href="/docs/developer/flag/database/" title="Flag Request Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperflagdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsdevelopermeeting-li">
+  <a href="/docs/developer/meeting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopermeeting"><span class="">Meetings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdevelopermeetingdatabase-li">
+  <a href="/docs/developer/meeting/database/" title="Meetings Database" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsdevelopermeetingdatabase"><span class="td-sidebar-nav-active-item">Database</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopermeetinginitialize-li">
+  <a href="/docs/developer/meeting/initialize/" title="Start Up Data" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopermeetinginitialize"><span class="">Initialization</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloperproclamation-li">
+  <a href="/docs/developer/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperproclamation"><span class="">Proclamations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperproclamationdatabase-li">
+  <a href="/docs/developer/proclamation/database/" title="Proclamations Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperproclamationdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloperappuser-li">
+  <a href="/docs/developer/appuser/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperappuser"><span class="">Users</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperappuserdatabase-li">
+  <a href="/docs/developer/appuser/database/" title="Users and Roles Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdeveloperappuserdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdevelopergravityforms-li">
+  <a href="/docs/developer/gravityforms/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityforms"><span class="">Gravity Forms</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsais-li">
+  <a href="/docs/developer/gravityforms/ais/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsais"><span class="">Advance Information Sheet</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsjudicial-li">
+  <a href="/docs/developer/gravityforms/judicial/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsjudicial"><span class="">Comments on Judicial Nominees</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformslegislation-li">
+  <a href="/docs/developer/gravityforms/legislation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformslegislation"><span class="">Comments on Legislation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsflevent-li">
+  <a href="/docs/developer/gravityforms/flevent/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsflevent"><span class="">Invite the First Lady to an Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsevent-li">
+  <a href="/docs/developer/gravityforms/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsevent"><span class="">Invite the Governor to an Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsproclamation-li">
+  <a href="/docs/developer/gravityforms/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsproclamation"><span class="">Request a Proclamation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsbillsigning-li">
+  <a href="/docs/developer/gravityforms/billsigning/" title="Bill Signing Ceremony Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsbillsigning"><span class="">Bill Signing Requests</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformscontactthefirstlady-li">
+  <a href="/docs/developer/gravityforms/contactthefirstlady/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformscontactthefirstlady"><span class="">Contact the First Lady</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeveloperreports-li">
+  <a href="/docs/developer/reports/" title="Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperreports"><span class="">Report</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloperwebjob-li">
+  <a href="/docs/developer/webjob/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperwebjob"><span class="">WebJob</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperwebjobprojectcode-li">
+  <a href="/docs/developer/webjob/projectcode/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdeveloperwebjobprojectcode"><span class="">Project Code</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeveloperdatabase-li">
+  <a href="/docs/developer/database/" title="Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperdatabase"><span class="">Database Initialization</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopergraph-li">
+  <a href="/docs/developer/graph/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergraph"><span class="">Graph</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeveloperinit-li">
+  <a href="/docs/developer/init/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperinit"><span class="">Initial Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopernewadministration-li">
+  <a href="/docs/developer/newadministration/" title="New Governor" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopernewadministration"><span class="">New Administration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdeveloperdocumentation-li">
+  <a href="/docs/developer/documentation/" title="This documentation project" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperdocumentation"><span class="">This Documentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsdevelopertest-li">
+  <a href="/docs/developer/test/" title="TEST" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopertest"><span class="">Test</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            
+            
+
+	
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/docs/developer/">Development</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/docs/developer/meeting/">Meetings</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="/docs/developer/meeting/database/" aria-disabled="true" class="btn-link disabled">Database</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Meetings Database</h1>
+	
+	<header class="article-meta">
+		
+
+  
+    
+      
+
+
+    
+      
+
+
+    
+  
+
+		
+	</header>    
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1110 1519">
+<g id="tbl_work">
+<rect x="1" y="1" rx="1" width="183" height="16" fill="lightgray"/><text x="26" y="13" font-size="12" fill="darkblue">work</text><line x1="1" y1="17" x2="183" y2="17" stroke="darkblue" vector-effect="non-scaling-stroke"/><g id="fld_work_workid"><rect x="1" y="17" width="182" height="14" fill="none"/><text x="4" y="29" font-size="12" fill="darkblue">PK</text><text x="26" y="29" font-size="12" fill="darkblue">workid</text></g><line x1="2" y1="32" x2="182" y2="32" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="44" font-size="12" fill="darkblue">worktype</text><line x1="2" y1="47" x2="182" y2="47" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="59" font-size="12" fill="darkblue">receiveddate</text><line x1="2" y1="62" x2="182" y2="62" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="74" font-size="12" fill="darkblue">source</text><line x1="2" y1="77" x2="182" y2="77" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="89" font-size="12" fill="darkblue">workname</text><line x1="2" y1="92" x2="182" y2="92" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="104" font-size="12" fill="darkblue">msgtype</text><line x1="2" y1="107" x2="182" y2="107" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="119" font-size="12" fill="darkblue">message</text><line x1="2" y1="122" x2="182" y2="122" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="134" font-size="12" fill="darkblue">description</text><line x1="2" y1="137" x2="182" y2="137" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="149" font-size="12" fill="darkblue">discussion</text><line x1="2" y1="152" x2="182" y2="152" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="164" font-size="12" fill="darkblue">addinfo</text><line x1="2" y1="167" x2="182" y2="167" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="179" font-size="12" fill="darkblue">eventdate1</text><line x1="2" y1="182" x2="182" y2="182" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="194" font-size="12" fill="darkblue">eventdate2</text><line x1="2" y1="197" x2="182" y2="197" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="209" font-size="12" fill="darkblue">eventdate3</text><line x1="2" y1="212" x2="182" y2="212" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="224" font-size="12" fill="darkblue">data1</text><line x1="2" y1="227" x2="182" y2="227" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="239" font-size="12" fill="darkblue">data2</text><line x1="2" y1="242" x2="182" y2="242" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="254" font-size="12" fill="darkblue">island</text><line x1="2" y1="257" x2="182" y2="257" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="269" font-size="12" fill="darkblue">servicenote</text><line x1="2" y1="272" x2="182" y2="272" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="284" font-size="12" fill="darkblue">assigned</text><line x1="2" y1="287" x2="182" y2="287" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="299" font-size="12" fill="darkblue">assigneddate</text><line x1="2" y1="302" x2="182" y2="302" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="314" font-size="12" fill="darkblue">batch</text><line x1="2" y1="317" x2="182" y2="317" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="329" font-size="12" fill="darkblue">closeddate</text><line x1="2" y1="332" x2="182" y2="332" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="344" font-size="12" fill="darkblue">closedreason</text><line x1="2" y1="347" x2="182" y2="347" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="359" font-size="12" fill="darkblue">duedate</text><line x1="2" y1="362" x2="182" y2="362" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="374" font-size="12" fill="darkblue">status</text><line x1="2" y1="377" x2="182" y2="377" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="389" font-size="12" fill="darkblue">statusdate</text><line x1="2" y1="392" x2="182" y2="392" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="404" font-size="12" fill="darkblue">externalid</text><line x1="2" y1="407" x2="182" y2="407" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="419" font-size="12" fill="darkblue">createuser</text><line x1="2" y1="422" x2="182" y2="422" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="434" font-size="12" fill="darkblue">createdate</text><line x1="2" y1="437" x2="182" y2="437" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="449" font-size="12" fill="darkblue">modifyuser</text><line x1="2" y1="452" x2="182" y2="452" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="464" font-size="12" fill="darkblue">modifydate</text><line x1="2" y1="467" x2="182" y2="467" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="479" font-size="12" fill="darkblue">recordstate</text><line x1="2" y1="482" x2="182" y2="482" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="494" font-size="12" fill="darkblue">data9</text><line x1="2" y1="497" x2="182" y2="497" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="509" font-size="12" fill="darkblue">orgid</text><line x1="2" y1="512" x2="182" y2="512" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="524" font-size="12" fill="darkblue">refid</text><line x1="2" y1="527" x2="182" y2="527" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="539" font-size="12" fill="darkblue">caseid</text><line x1="2" y1="542" x2="182" y2="542" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="554" font-size="12" fill="darkblue">evntid</text><line x1="2" y1="557" x2="182" y2="557" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="26" y="569" font-size="12" fill="darkblue">procid</text><rect x="1" y="1" rx="2" width="182" height="571" fill="transparent" stroke="darkblue" vector-effect="non-scaling-stroke"/><line x1="23" y1="18" x2="23" y2="571" stroke="lightgray" vector-effect="non-scaling-stroke"/>
+</g>
+<g id="tbl_workcontact">
+<rect x="233" y="1" rx="1" width="183" height="16" fill="lightgray"/><text x="258" y="13" font-size="12" fill="darkblue">workcontact</text><line x1="233" y1="17" x2="415" y2="17" stroke="darkblue" vector-effect="non-scaling-stroke"/><g id="fld_workcontact_id"><rect x="233" y="17" width="182" height="14" fill="none"/><text x="236" y="29" font-size="12" fill="darkblue">PK</text><text x="258" y="29" font-size="12" fill="darkblue">id</text></g><line x1="234" y1="32" x2="414" y2="32" stroke="lightgray" vector-effect="non-scaling-stroke"/><g id="fld_workcontact_workid"><rect x="233" y="32" width="182" height="14" fill="none"/><text x="236" y="44" font-size="12" fill="#e5e5e5">FK</text><text x="258" y="44" font-size="12" fill="darkblue">workid</text></g><line x1="234" y1="47" x2="414" y2="47" stroke="lightgray" vector-effect="non-scaling-stroke"/><g id="fld_workcontact_contactid"><rect x="233" y="47" width="182" height="14" fill="none"/><text x="236" y="59" font-size="12" fill="#e5e5e5">FK</text><text x="258" y="59" font-size="12" fill="darkblue">contactid</text></g><line x1="234" y1="62" x2="414" y2="62" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="74" font-size="12" fill="darkblue">status</text><line x1="234" y1="77" x2="414" y2="77" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="89" font-size="12" fill="darkblue">createuser</text><line x1="234" y1="92" x2="414" y2="92" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="104" font-size="12" fill="darkblue">createdate</text><line x1="234" y1="107" x2="414" y2="107" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="119" font-size="12" fill="darkblue">modifyuser</text><line x1="234" y1="122" x2="414" y2="122" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="134" font-size="12" fill="darkblue">modifydate</text><line x1="234" y1="137" x2="414" y2="137" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="149" font-size="12" fill="darkblue">recordstate</text><line x1="234" y1="152" x2="414" y2="152" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="164" font-size="12" fill="darkblue">prevcontactid</text><rect x="233" y="1" rx="2" width="182" height="166" fill="transparent" stroke="darkblue" vector-effect="non-scaling-stroke"/><line x1="255" y1="18" x2="255" y2="166" stroke="lightgray" vector-effect="non-scaling-stroke"/>
+</g>
+<g id="tbl_workact">
+<rect x="233" y="217" rx="1" width="183" height="16" fill="lightgray"/><text x="258" y="229" font-size="12" fill="darkblue">workact</text><line x1="233" y1="233" x2="415" y2="233" stroke="darkblue" vector-effect="non-scaling-stroke"/><g id="fld_workact_id"><rect x="233" y="233" width="182" height="14" fill="none"/><text x="236" y="245" font-size="12" fill="darkblue">PK</text><text x="258" y="245" font-size="12" fill="darkblue">id</text></g><line x1="234" y1="248" x2="414" y2="248" stroke="lightgray" vector-effect="non-scaling-stroke"/><g id="fld_workact_workid"><rect x="233" y="248" width="182" height="14" fill="none"/><text x="236" y="260" font-size="12" fill="#e5e5e5">FK</text><text x="258" y="260" font-size="12" fill="darkblue">workid</text></g><line x1="234" y1="263" x2="414" y2="263" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="275" font-size="12" fill="darkblue">status</text><line x1="234" y1="278" x2="414" y2="278" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="290" font-size="12" fill="darkblue">description</text><line x1="234" y1="293" x2="414" y2="293" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="305" font-size="12" fill="darkblue">duedate</text><line x1="234" y1="308" x2="414" y2="308" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="320" font-size="12" fill="darkblue">email</text><line x1="234" y1="323" x2="414" y2="323" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="335" font-size="12" fill="darkblue">contactid</text><line x1="234" y1="338" x2="414" y2="338" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="350" font-size="12" fill="darkblue">active</text><line x1="234" y1="353" x2="414" y2="353" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="365" font-size="12" fill="darkblue">createuser</text><line x1="234" y1="368" x2="414" y2="368" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="380" font-size="12" fill="darkblue">createdate</text><line x1="234" y1="383" x2="414" y2="383" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="395" font-size="12" fill="darkblue">modifyuser</text><line x1="234" y1="398" x2="414" y2="398" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="410" font-size="12" fill="darkblue">modifydate</text><line x1="234" y1="413" x2="414" y2="413" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="425" font-size="12" fill="darkblue">recordstate</text><line x1="234" y1="428" x2="414" y2="428" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="440" font-size="12" fill="darkblue">userid</text><rect x="233" y="217" rx="2" width="182" height="226" fill="transparent" stroke="darkblue" vector-effect="non-scaling-stroke"/><line x1="255" y1="234" x2="255" y2="442" stroke="lightgray" vector-effect="non-scaling-stroke"/>
+</g>
+<g id="tbl_contact">
+<rect x="465" y="1" rx="1" width="183" height="16" fill="lightgray"/><text x="490" y="13" font-size="12" fill="darkblue">contact</text><line x1="465" y1="17" x2="647" y2="17" stroke="darkblue" vector-effect="non-scaling-stroke"/><g id="fld_contact_contactid"><rect x="465" y="17" width="182" height="14" fill="none"/><text x="468" y="29" font-size="12" fill="darkblue">PK</text><text x="490" y="29" font-size="12" fill="darkblue">contactid</text></g><line x1="466" y1="32" x2="646" y2="32" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="44" font-size="12" fill="darkblue">contacttype</text><line x1="466" y1="47" x2="646" y2="47" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="59" font-size="12" fill="darkblue">lastname</text><line x1="466" y1="62" x2="646" y2="62" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="74" font-size="12" fill="darkblue">firstname</text><line x1="466" y1="77" x2="646" y2="77" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="89" font-size="12" fill="darkblue">middlename</text><line x1="466" y1="92" x2="646" y2="92" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="104" font-size="12" fill="darkblue">prefix</text><line x1="466" y1="107" x2="646" y2="107" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="119" font-size="12" fill="darkblue">suffix</text><line x1="466" y1="122" x2="646" y2="122" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="134" font-size="12" fill="darkblue">appellation</text><line x1="466" y1="137" x2="646" y2="137" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="149" font-size="12" fill="darkblue">salutation</text><line x1="466" y1="152" x2="646" y2="152" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="164" font-size="12" fill="darkblue">gender</text><line x1="466" y1="167" x2="646" y2="167" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="179" font-size="12" fill="darkblue">birthdate</text><line x1="466" y1="182" x2="646" y2="182" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="194" font-size="12" fill="darkblue">island</text><line x1="466" y1="197" x2="646" y2="197" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="209" font-size="12" fill="darkblue">mergedto</text><line x1="466" y1="212" x2="646" y2="212" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="224" font-size="12" fill="darkblue">externalid</text><line x1="466" y1="227" x2="646" y2="227" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="239" font-size="12" fill="darkblue">createuser</text><line x1="466" y1="242" x2="646" y2="242" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="254" font-size="12" fill="darkblue">createdate</text><line x1="466" y1="257" x2="646" y2="257" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="269" font-size="12" fill="darkblue">modifyuser</text><line x1="466" y1="272" x2="646" y2="272" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="284" font-size="12" fill="darkblue">modifydate</text><line x1="466" y1="287" x2="646" y2="287" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="299" font-size="12" fill="darkblue">recordstate</text><line x1="466" y1="302" x2="646" y2="302" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="314" font-size="12" fill="darkblue">frequentwriter</text><line x1="466" y1="317" x2="646" y2="317" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="329" font-size="12" fill="darkblue">orgname</text><line x1="466" y1="332" x2="646" y2="332" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="344" font-size="12" fill="darkblue">website</text><line x1="466" y1="347" x2="646" y2="347" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="359" font-size="12" fill="darkblue">constituentid</text><rect x="465" y="1" rx="2" width="182" height="361" fill="transparent" stroke="darkblue" vector-effect="non-scaling-stroke"/><line x1="487" y1="18" x2="487" y2="361" stroke="lightgray" vector-effect="non-scaling-stroke"/>
+</g>
+<g id="tbl_meetingdept">
+<rect x="233" y="622" rx="1" width="183" height="16" fill="lightgray"/><text x="258" y="634" font-size="12" fill="darkblue">meetingdept</text><line x1="233" y1="638" x2="415" y2="638" stroke="darkblue" vector-effect="non-scaling-stroke"/><g id="fld_meetingdept_agencycode"><rect x="233" y="638" width="182" height="14" fill="none"/><text x="236" y="650" font-size="12" fill="darkblue">PK</text><text x="258" y="650" font-size="12" fill="darkblue">agencycode</text></g><line x1="234" y1="653" x2="414" y2="653" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="665" font-size="12" fill="darkblue">agencyname</text><line x1="234" y1="668" x2="414" y2="668" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="680" font-size="12" fill="darkblue">description</text><line x1="234" y1="683" x2="414" y2="683" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="695" font-size="12" fill="darkblue">status</text><line x1="234" y1="698" x2="414" y2="698" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="258" y="710" font-size="12" fill="darkblue">replyto</text><rect x="233" y="622" rx="2" width="182" height="91" fill="transparent" stroke="darkblue" vector-effect="non-scaling-stroke"/><line x1="255" y1="639" x2="255" y2="712" stroke="lightgray" vector-effect="non-scaling-stroke"/>
+</g>
+<g id="tbl_meetingcontact">
+<rect x="465" y="622" rx="1" width="183" height="16" fill="lightgray"/><text x="490" y="634" font-size="12" fill="darkblue">meetingcontact</text><line x1="465" y1="638" x2="647" y2="638" stroke="darkblue" vector-effect="non-scaling-stroke"/><g id="fld_meetingcontact_id"><rect x="465" y="638" width="182" height="14" fill="none"/><text x="468" y="650" font-size="12" fill="darkblue">PK</text><text x="490" y="650" font-size="12" fill="darkblue">id</text></g><line x1="466" y1="653" x2="646" y2="653" stroke="lightgray" vector-effect="non-scaling-stroke"/><g id="fld_meetingcontact_agencycode"><rect x="465" y="653" width="182" height="14" fill="none"/><text x="468" y="665" font-size="12" fill="#e5e5e5">FK</text><text x="490" y="665" font-size="12" fill="darkblue">agencycode</text></g><line x1="466" y1="668" x2="646" y2="668" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="680" font-size="12" fill="darkblue">contactid</text><line x1="466" y1="683" x2="646" y2="683" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="695" font-size="12" fill="darkblue">lastname</text><line x1="466" y1="698" x2="646" y2="698" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="710" font-size="12" fill="darkblue">firstname</text><line x1="466" y1="713" x2="646" y2="713" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="725" font-size="12" fill="darkblue">title</text><line x1="466" y1="728" x2="646" y2="728" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="740" font-size="12" fill="darkblue">email</text><line x1="466" y1="743" x2="646" y2="743" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="755" font-size="12" fill="darkblue">replyto</text><line x1="466" y1="758" x2="646" y2="758" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="770" font-size="12" fill="darkblue">status</text><line x1="466" y1="773" x2="646" y2="773" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="785" font-size="12" fill="darkblue">createuser</text><line x1="466" y1="788" x2="646" y2="788" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="800" font-size="12" fill="darkblue">createdate</text><line x1="466" y1="803" x2="646" y2="803" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="815" font-size="12" fill="darkblue">modifyuser</text><line x1="466" y1="818" x2="646" y2="818" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="830" font-size="12" fill="darkblue">modifydate</text><line x1="466" y1="833" x2="646" y2="833" stroke="lightgray" vector-effect="non-scaling-stroke"/><text x="490" y="845" font-size="12" fill="darkblue">recordstate</text><rect x="465" y="622" rx="2" width="182" height="226" fill="transparent" stroke="darkblue" vector-effect="non-scaling-stroke"/><line x1="487" y1="639" x2="487" y2="847" stroke="lightgray" vector-effect="non-scaling-stroke"/>
+</g>
+</svg>
+<script src="/js/plain-draggable.min.js"></script>
+<script src="/js/leader-line.min.js"></script>
+<script>
+var drag0=new PlainDraggable(document.getElementById("tbl_work"));var drag1=new PlainDraggable(document.getElementById("tbl_workcontact"));var drag2=new PlainDraggable(document.getElementById("tbl_workact"));var drag3=new PlainDraggable(document.getElementById("tbl_contact"));var drag4=new PlainDraggable(document.getElementById("tbl_meetingdept"));var drag5=new PlainDraggable(document.getElementById("tbl_meetingcontact"));
+var line38=new LeaderLine(document.getElementById("fld_workcontact_workid"),document.getElementById("fld_work_workid"),{color:"blue",size:2});var line39=new LeaderLine(document.getElementById("fld_workcontact_contactid"),document.getElementById("fld_contact_contactid"),{color:"blue",size:2});var line48=new LeaderLine(document.getElementById("fld_workact_workid"),document.getElementById("fld_work_workid"),{color:"blue",size:2});var line90=new LeaderLine(document.getElementById("fld_meetingcontact_agencycode"),document.getElementById("fld_meetingdept_agencycode"),{color:"blue",size:2});
+drag0.onMove=function(){line38.position();line48.position();};drag1.onMove=function(){line38.position();line39.position();};drag2.onMove=function(){line48.position();};drag3.onMove=function(){line39.position();};drag4.onMove=function(){line90.position();};drag5.onMove=function(){line90.position();};
+</script>
+
+	
+	
+	
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GovCRM" aria-label="GovCRM">
+    <a class="text-white" target="_blank" rel="noopener" href="https://govcrm.hawaii.gov" aria-label="GovCRM">
+      <i class="fab fa-microsoft"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Governor&#39;s website" aria-label="Governor&#39;s website">
+    <a class="text-white" target="_blank" rel="noopener" href="https://governor.hawaii.gov" aria-label="Governor&#39;s website">
+      <i class="fa fa-globe"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+  <script src="/js/main.min.2aff983e9d0d8ecff9ed53e14b657216e2d8d2aff059bf4a5651283020995f1b.js" integrity="sha256-Kv&#43;YPp0Njs/57VPhS2VyFuLY0q/wWb9KVlEoMCCZXxs=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>

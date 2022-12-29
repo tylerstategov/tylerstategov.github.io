@@ -1,0 +1,802 @@
+<!doctype html>
+<html itemscope itemtype="http://schema.org/WebPage" lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.107.0">
+<meta name="robots" content="index, follow">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>Security | GovDocs</title>
+<meta name="description" content="Active Directory Security Groups and Azure App Service Roles">
+<meta property="og:title" content="Security" />
+<meta property="og:description" content="Active Directory Security Groups and Azure App Service Roles" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/docs/govcrm/security/" /><meta property="og:site_name" content="GovDocs" />
+
+<meta itemprop="name" content="Security">
+<meta itemprop="description" content="Active Directory Security Groups and Azure App Service Roles"><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Security"/>
+<meta name="twitter:description" content="Active Directory Security Groups and Azure App Service Roles"/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.b7a39eca288f3519de4aa11dc413ec657262fc95b972b7f6fdbb62236ed8f4f7.css" as="style">
+<link href="/scss/main.min.b7a39eca288f3519de4aa11dc413ec657262fc95b972b7f6fdbb62236ed8f4f7.css" rel="stylesheet" integrity="">
+
+<script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+  crossorigin="anonymous"></script>
+<script defer
+  src="https://unpkg.com/lunr@2.3.9/lunr.min.js"
+  integrity="sha384-203J0SNzyqHby3iU6hzvzltrWi/M41wOP5Gu+BiJMz5nwKykbkUx8Kp7iti0Lpli"
+  crossorigin="anonymous"></script>
+
+  </head>
+  <body class="td-section">
+    <header>
+      <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+  <a class="navbar-brand" href="/"><span class="navbar-brand__logo navbar-logo"></span><span class="navbar-brand__name">GovDocs</span></a>
+  <div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+    <ul class="navbar-nav mt-2 mt-lg-0">
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/docs/"><i class='fab fa-stack-overflow'></i><span class="active">Documentation</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link active" href="/docs/govcrm/"><span class="active">GovCRM</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/docs/website/"><span>Website</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/docs/developer/"><span>Development</span></a>
+      </li>
+      <li class="nav-item mr-4 mb-2 mb-lg-0">
+        <a class="nav-link" href="/about/"><span>About</span></a>
+      </li>
+      </ul>
+  </div>
+  <div class="navbar-nav d-none d-lg-block">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.192812ea7f5696f844278d541dec5f1e.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+
+  </div>
+</nav>
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  <form class="td-sidebar__search d-flex align-items-center">
+    <div class="td-search td-search--offline">
+  <div class="td-search__icon"></div>
+  <input
+    type="search"
+    class="td-search__input form-control"
+    placeholder="Search this site…"
+    aria-label="Search this site…"
+    autocomplete="off"
+    
+    data-offline-search-index-json-src="/offline-search-index.192812ea7f5696f844278d541dec5f1e.json"
+    data-offline-search-base-href="/"
+    data-offline-search-max-results="10"
+  >
+</div>
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-section-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
+  <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
+  <ul class="ul-1">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docsgovcrm-li">
+  <a href="/docs/govcrm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrm"><span class="">GovCRM</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrmboard-li">
+  <a href="/docs/govcrm/board/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboard"><span class="">Boards</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmboardboards-li">
+  <a href="/docs/govcrm/board/boards/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboardboards"><span class="">Boards Data</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardboardsdepartments-li">
+  <a href="/docs/govcrm/board/boards/departments/" title="Boards Department Codes" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardboardsdepartments"><span class="">Departments</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardseats-li">
+  <a href="/docs/govcrm/board/seats/" title="Board Seats" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardseats"><span class="">Seats</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardmembers-li">
+  <a href="/docs/govcrm/board/members/" title="Board Members" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardmembers"><span class="">Members</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardapplications-li">
+  <a href="/docs/govcrm/board/applications/" title="Board Applications" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardapplications"><span class="">Applications</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardworkflow-li">
+  <a href="/docs/govcrm/board/workflow/" title="Workflow" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmboardworkflow"><span class="">How To</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmboardreports-li">
+  <a href="/docs/govcrm/board/reports/" title="Board Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmboardreports"><span class="">Reports</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrmcasework-li">
+  <a href="/docs/govcrm/casework/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcasework"><span class="">Casework</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcaseworkworklist-li">
+  <a href="/docs/govcrm/casework/worklist/" title="Casework" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcaseworkworklist"><span class="">Casework List</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmcaseworkreports-li">
+  <a href="/docs/govcrm/casework/reports/" title="Casework Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcaseworkreports"><span class="">Reports</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrmconfig-li">
+  <a href="/docs/govcrm/config/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfig"><span class="">Config</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfigagency-li">
+  <a href="/docs/govcrm/config/agency/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfigagency"><span class="">Agencies</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfigemailtemplate-li">
+  <a href="/docs/govcrm/config/emailtemplate/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfigemailtemplate"><span class="">Email Templates</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmconfiguser-li">
+  <a href="/docs/govcrm/config/user/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmconfiguser"><span class="">Users</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgovcrmcontact-li">
+  <a href="/docs/govcrm/contact/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmcontact"><span class="">Contacts</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgovcrmemails-li">
+  <a href="/docs/govcrm/emails/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmemails"><span class="">Emails</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrmevent-li">
+  <a href="/docs/govcrm/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmevent"><span class="">Events</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventais-li">
+  <a href="/docs/govcrm/event/ais/" title="Advance Information Sheet" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventais"><span class="">AIS</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventcontactus-li">
+  <a href="/docs/govcrm/event/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventcontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventeventdata-li">
+  <a href="/docs/govcrm/event/eventdata/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventeventdata"><span class="">Data</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventworkflow-li">
+  <a href="/docs/govcrm/event/workflow/" title="Edit Events" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventworkflow"><span class="">Edit Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmeventemails-li">
+  <a href="/docs/govcrm/event/emails/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmeventemails"><span class="">Emails</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrmflag-li">
+  <a href="/docs/govcrm/flag/" title="Flags Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflag"><span class="">Flag Requests</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagworkflow-li">
+  <a href="/docs/govcrm/flag/workflow/" title="GovCRM Flag Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagworkflow"><span class="">GovCRM</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagcontactus-li">
+  <a href="/docs/govcrm/flag/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagcontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmflagflagdata-li">
+  <a href="/docs/govcrm/flag/flagdata/" title="Flag Request Data Definition" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmflagflagdata"><span class="">Data Definition</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgovcrmlegislative-li">
+  <a href="/docs/govcrm/legislative/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmlegislative"><span class="">Legislation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgovcrmmeeting-li">
+  <a href="/docs/govcrm/meeting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmmeeting"><span class="">Meetings</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsgovcrmproclamation-li">
+  <a href="/docs/govcrm/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamation"><span class="">Proclamations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsgovcrmproclamationcontactus-li">
+  <a href="/docs/govcrm/proclamation/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamationcontactus"><span class="">Contact Us</span></a>
+  <ul class="ul-4 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactusmessage-li">
+  <a href="/docs/govcrm/proclamation/contactus/message/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactusmessage"><span class="">Commemorative Message</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactuswithevent-li">
+  <a href="/docs/govcrm/proclamation/contactus/withevent/" title="Commemorative Message with Event" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactuswithevent"><span class="">Message with Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationcontactusmilitary-li">
+  <a href="/docs/govcrm/proclamation/contactus/military/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsgovcrmproclamationcontactusmilitary"><span class="">Military Retirement Message</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsgovcrmproclamationroles-li">
+  <a href="/docs/govcrm/proclamation/roles/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmproclamationroles"><span class="">Roles</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsgovcrmsecurity-li">
+  <a href="/docs/govcrm/security/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmsecurity"><span class="td-sidebar-nav-active-item">Security</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgovcrmappuser-li">
+  <a href="/docs/govcrm/appuser/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgovcrmappuser"><span class="">Users</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docswebsite-li">
+  <a href="/docs/website/" title="Governor&#39;s Website" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswebsite"><span class="">Website</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitebills-li">
+  <a href="/docs/website/bills/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitebills"><span class="">Acts and Vetoes</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitebillssigned-li">
+  <a href="/docs/website/billssigned/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitebillssigned"><span class="">Bills Signed</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitecontactus-li">
+  <a href="/docs/website/contactus/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitecontactus"><span class="">Contact Us</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitenewsletter-li">
+  <a href="/docs/website/newsletter/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitenewsletter"><span class="">Newsletter Archive</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitehomepageslider-li">
+  <a href="/docs/website/homepageslider/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docswebsitehomepageslider"><span class="">Sliders</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docswebsitetoppriorities-li">
+  <a href="/docs/website/toppriorities/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docswebsitetoppriorities"><span class="">Top Priorites</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-docsdeveloper-li">
+  <a href="/docs/developer/" title="Developer Information" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloper"><span class="">Development</span></a>
+  <ul class="ul-2 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperboard-li">
+  <a href="/docs/developer/board/" title="Boards and Commissions" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperboard"><span class="">Boards</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperboarddatabase-li">
+  <a href="/docs/developer/board/database/" title="Boards Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperboarddatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopercasework-li">
+  <a href="/docs/developer/casework/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercasework"><span class="">Casework</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopercaseworkdatabase-li">
+  <a href="/docs/developer/casework/database/" title="Casework Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercaseworkdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopercontact-li">
+  <a href="/docs/developer/contact/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopercontact"><span class="">Contacts</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopercontactdatabase-li">
+  <a href="/docs/developer/contact/database/" title="Contact Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopercontactdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperemail-li">
+  <a href="/docs/developer/email/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperemail"><span class="">Email Templates</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperemaildatabase-li">
+  <a href="/docs/developer/email/database/" title="Email Template Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperemaildatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperevent-li">
+  <a href="/docs/developer/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperevent"><span class="">Events</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperflag-li">
+  <a href="/docs/developer/flag/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperflag"><span class="">Flag Requests</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperflagdatabase-li">
+  <a href="/docs/developer/flag/database/" title="Flag Request Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperflagdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopermeeting-li">
+  <a href="/docs/developer/meeting/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopermeeting"><span class="">Meetings</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopermeetingdatabase-li">
+  <a href="/docs/developer/meeting/database/" title="Meetings Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopermeetingdatabase"><span class="">Database</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopermeetinginitialize-li">
+  <a href="/docs/developer/meeting/initialize/" title="Start Up Data" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopermeetinginitialize"><span class="">Initialization</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperproclamation-li">
+  <a href="/docs/developer/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperproclamation"><span class="">Proclamations</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperproclamationdatabase-li">
+  <a href="/docs/developer/proclamation/database/" title="Proclamations Database Schema" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperproclamationdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperappuser-li">
+  <a href="/docs/developer/appuser/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperappuser"><span class="">Users</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperappuserdatabase-li">
+  <a href="/docs/developer/appuser/database/" title="Users and Roles Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdeveloperappuserdatabase"><span class="">Database</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdevelopergravityforms-li">
+  <a href="/docs/developer/gravityforms/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityforms"><span class="">Gravity Forms</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsais-li">
+  <a href="/docs/developer/gravityforms/ais/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsais"><span class="">Advance Information Sheet</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsjudicial-li">
+  <a href="/docs/developer/gravityforms/judicial/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsjudicial"><span class="">Comments on Judicial Nominees</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformslegislation-li">
+  <a href="/docs/developer/gravityforms/legislation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformslegislation"><span class="">Comments on Legislation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsflevent-li">
+  <a href="/docs/developer/gravityforms/flevent/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsflevent"><span class="">Invite the First Lady to an Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsevent-li">
+  <a href="/docs/developer/gravityforms/event/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsevent"><span class="">Invite the Governor to an Event</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsproclamation-li">
+  <a href="/docs/developer/gravityforms/proclamation/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsproclamation"><span class="">Request a Proclamation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformsbillsigning-li">
+  <a href="/docs/developer/gravityforms/billsigning/" title="Bill Signing Ceremony Requests" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformsbillsigning"><span class="">Bill Signing Requests</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergravityformscontactthefirstlady-li">
+  <a href="/docs/developer/gravityforms/contactthefirstlady/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergravityformscontactthefirstlady"><span class="">Contact the First Lady</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperreports-li">
+  <a href="/docs/developer/reports/" title="Reports" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperreports"><span class="">Report</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child collapse" id="m-docsdeveloperwebjob-li">
+  <a href="/docs/developer/webjob/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperwebjob"><span class="">WebJob</span></a>
+  <ul class="ul-3 foldable">
+    <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperwebjobprojectcode-li">
+  <a href="/docs/developer/webjob/projectcode/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdeveloperwebjobprojectcode"><span class="">Project Code</span></a>
+</li>
+  </ul>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperdatabase-li">
+  <a href="/docs/developer/database/" title="Database" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperdatabase"><span class="">Database Initialization</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopergraph-li">
+  <a href="/docs/developer/graph/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopergraph"><span class="">Graph</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperinit-li">
+  <a href="/docs/developer/init/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperinit"><span class="">Initial Setup</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopernewadministration-li">
+  <a href="/docs/developer/newadministration/" title="New Governor" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdevelopernewadministration"><span class="">New Administration</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdeveloperdocumentation-li">
+  <a href="/docs/developer/documentation/" title="This documentation project" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsdeveloperdocumentation"><span class="">This Documentation</span></a>
+</li><li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child collapse" id="m-docsdevelopertest-li">
+  <a href="/docs/developer/test/" title="TEST" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsdevelopertest"><span class="">Test</span></a>
+</li>
+  </ul>
+</li>
+  </ul>
+</li>
+    </ul>
+  </nav>
+</div>
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+<div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+
+</div>
+
+            <div class="td-toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+    <li><a href="#commemorative-messages-roles">Commemorative Messages roles</a></li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    
+            
+
+	
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+			
+				
+			
+			
+
+
+
+  
+  
+
+		
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="td-breadcrumbs">
+  <ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/docs/">Documentation</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/docs/govcrm/">GovCRM</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">
+    <a href="/docs/govcrm/security/" aria-disabled="true" class="btn-link disabled">Security</a>
+  </li>
+  </ol>
+</nav>
+            
+<div class="td-content">
+	<h1>Security</h1>
+  <div class="lead">Active Directory Security Groups and Azure App Service Roles</div>
+	<header class="article-meta">
+		
+
+  
+    
+      
+
+
+    
+      
+
+
+    
+  
+
+		
+	</header>
+	<style> .govimg {margin-bottom:1.5em}</style>
+<p>The GovCRM application is secured by Azure Active Directory.</p>
+<p>Local on-prem active directory in hawaii.local GOVOU has security groups for this application.</p>
+<p>The AD security groups can be assigned to these staff users:</p>
+<ul>
+<li>Boards and Commissions</li>
+<li>Casework</li>
+<li>Commemorative Messages</li>
+<li>Events with the Governor</li>
+<li>Flag Requests</li>
+<li>Meetings with the Governor</li>
+<li>Admin/Config</li>
+</ul>
+<p>A <strong>new staff person</strong> is added to AD group <em><strong>GovOfficeCRM</strong></em> plus one or more of the other security groups. When the staff person leaves, remove the person from the Active Directory security groups.</p>
+<h4 id="list-of-active-directory-security-groups">List of Active Directory Security Groups</h4>
+<img src="adgroups.png">
+<table>
+<thead>
+<tr>
+<th>AD Security Group</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GovOfficeCRM</td>
+<td>Access to HOME page and Legislative Comments (Everyone should belong to this group.)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMBNC</td>
+<td>Boards and Commissions Regular Users (edit)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMBNCViewer</td>
+<td>Boards and Commissions Read Only (read only)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCasesAdmin</td>
+<td>Casework Administrators (admin)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCasesUser</td>
+<td>Casework Regular Users (edit)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCM</td>
+<td>Commemorative Messages Read Only (read only)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMAdmin</td>
+<td>Commemorative Messages Administrators (admin)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMUser</td>
+<td>Commemorative Messages Regular Users (edit)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMConfigUser</td>
+<td>Configuration Administrator</td>
+</tr>
+<tr>
+<td>GovOfficeCRMFlagsAdmin</td>
+<td>Flag Request Administrators (admin)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMFlagsUser</td>
+<td>Flag Request Regular Users (edit)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMGEAdmin</td>
+<td>Gov Events Admin (admin)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMGEUser</td>
+<td>Gov Events User (edit)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMGEViewer</td>
+<td>Gov Events Read Only (read only)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgAdmin</td>
+<td>Gov Meeting Requests Administrators (admin)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgUser</td>
+<td>Gov Meeting Requests Regular Users (edit)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgViewer</td>
+<td>Gov Meeting Requests Read Only (read only)</td>
+</tr>
+<tr>
+<td>GovOfficeCRMAdmin</td>
+<td>not used</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMCoord</td>
+<td>deprecated</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMEdit</td>
+<td>deprecated</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgFiltered</td>
+<td>deprecated</td>
+</tr>
+<tr>
+<td>GovOfficeCRMSurveyAdmin</td>
+<td></td>
+</tr>
+<tr>
+<td>GovOfficeCRMSurveyUser</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>There are matching AD groups with names that start with GovOfficeDEVCRM. These are used for <a href="https://govcrm-staging.azurewebsites.us/">https://govcrm-staging.azurewebsites.us/</a>.</p>
+<p>TODO: Update C# code so that only one AD group is needed.</p>
+<h2 id="commemorative-messages-roles">Commemorative Messages roles</h2>
+<p><strong>Commemorative Messages staff also are assigned GovCRM roles</strong>. These roles are explained at the <a href="/docs/govcrm/proclamation/roles/">Commemorative Messages Roles</a> page.</p>
+<p>Active Directory groups are assigned by your IT Administrator. Commemorative Message roles are assigned by your staff Commemorative Messages admin.</p>
+<p>When a staffer leaves, keep the username in the database table. The name is used in reports. You may set the user as <em>inactive</em>. <img src="activeinactive.png"></p>
+<hr style="border: solid 1px red; margin-top: 12em;">
+<h1 id="developer-notes">Developer Notes</h1>
+<ol>
+<li>Create Active Directory groups.</li>
+<li>Create Application roles in Azure Active Directory App Registration.</li>
+<li>Assign Active Directory groups to Application roles.</li>
+<li>Use Application role in C# code.</li>
+</ol>
+<p>There is a one-to-one relationship between Active Directory groups and Application roles.</p>
+<hr>
+<h4 id="application-roles">Application roles</h4>
+<p>Display the list of Application roles by clicking &ldquo;<em>App roles</em>&rdquo;.</p>
+<img src="aad_app_reg.png" class="govimg">
+<p>To create a new Application role, click the <em>Create app role</em> button.</p>
+<img src="aad_app_role_list.png" class="govimg">
+<p>Fill in the Role Display name, Value, and Description. Then click the <em>Apply</em> button.</p>
+<img src="aad_app_create_role.png">
+<hr>
+<h4 id="assign-active-directory-group-to-application-role">Assign Active Directory group to Application role</h4>
+<p><a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps">https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-add-app-roles-in-azure-ad-apps</a></p>
+<img src="aad_app_reg_managed.png" class="govimg">
+<p>Under Manage, select <em>Users and groups</em>. Select <em>Add user/group</em> to open the Add Assignment pane.</p>
+<img src="aad_app_users.png" class="govimg">
+<p>Select <span style="color:red"><em>Users and groups</em></span> in the Add Assignment pane. A list of users and security groups is displayed. You can search for GovCRM™ groups by entering &ldquo;govofficecrm&rdquo; in the <span style="border:#0078d4 solid 1px; padding: 0 3px;">search box</span>. Select the AD group from the list. Click the <em>Select</em> <img src="aad_app_user_select_button.png" alt="image of select button"> button to proceed.</p>
+<img src="aad_app_select_user.png" class="govimg">
+<p>Select <span style="color:#8a8886"><em>Select a role</em></span> in the Add assignment pane. All the roles that you&rsquo;ve defined for the application are displayed. The role descriptions are displayed. Choose a role and click the <em>Select</em> <img src="aad_app_user_select_button.png" alt="image of select button"> button.</p>
+<img src="aad_app_select_role.png" class="govimg">
+<p>Select the Assign <img src="aad_app_role_assign_button.png"> button to finish the assignment of groups to the app.</p>
+<img src="aad_app_role_assign.png" class="govimg">
+<p>Confirm that the groups you added appear in the Users and groups list.</p>
+<img src="aad_app_role_assign_list.png" class="govimg">
+<p>This the complete list.</p>
+<img src="aad_app_roles_done.png" class="govimg">
+<h4 id="this-is-the-final-mapping-of-active-directory-security-groups-to-govcrm-azure-app-service-app-roles"><strong>This is the final mapping of Active Directory Security Groups to GovCRM Azure App Service App Roles</strong>:</h4>
+<table>
+<thead>
+<tr>
+<th>AD Security Group</th>
+<th>Azure App Service Claims Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GovOfficeCRM</td>
+<td>CRM</td>
+</tr>
+<tr>
+<td>GovOfficeCRMBNC</td>
+<td>BCUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMBNCViewer</td>
+<td>BCViewer</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCasesAdmin</td>
+<td>CasesAdmin</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCasesUser</td>
+<td>CasesUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCM</td>
+<td>CMViewer</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMAdmin</td>
+<td>CMAdmin</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMUser</td>
+<td>CMUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMConfigUser</td>
+<td>ConfigUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMFlagsAdmin</td>
+<td>FlagsAdmin</td>
+</tr>
+<tr>
+<td>GovOfficeCRMFlagsUser</td>
+<td>FlagsUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMGEAdmin</td>
+<td>GEAdmin</td>
+</tr>
+<tr>
+<td>GovOfficeCRMGEUser</td>
+<td>GEUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMGEViewer</td>
+<td>GEViewer</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgAdmin</td>
+<td>MeetingAdmin</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgUser</td>
+<td>MeetingUser</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgViewer</td>
+<td>MeetingViewer</td>
+</tr>
+<tr>
+<td>GovOfficeCRMAdmin</td>
+<td></td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMCoord</td>
+<td>CMCoordinator</td>
+</tr>
+<tr>
+<td>GovOfficeCRMCMEdit</td>
+<td>CMEditor</td>
+</tr>
+<tr>
+<td>GovOfficeCRMMtgFiltered</td>
+<td>MeetingFiltered</td>
+</tr>
+<tr>
+<td>GovOfficeCRMSurveyAdmin</td>
+<td>SurveyAdmin</td>
+</tr>
+<tr>
+<td>GovOfficeCRMSurveyUser</td>
+<td>Survey</td>
+</tr>
+<tr>
+<td></td>
+<td>BCAdmin</td>
+</tr>
+<tr>
+<td></td>
+<td>CasesViewer</td>
+</tr>
+<tr>
+<td></td>
+<td>FlagsViewer</td>
+</tr>
+</tbody>
+</table>
+<h4 id="how-to-use-the-application-roles">How to use the Application roles</h4>
+<p>C# code</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#c4a000">[Authorize(Roles = &#34;CasesAdmin&#34;)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#204a87;font-weight:bold">public</span> <span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">CaseWorkController</span> <span style="color:#000;font-weight:bold">:</span> <span style="color:#000">Controller</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">    [HttpGet]</span>
+</span></span><span style="display:flex;"><span><span style="color:#c4a000">    [Authorize(Roles = &#34;CasesViewer,CasesUser,CasesAdmin&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#204a87;font-weight:bold">public</span> <span style="color:#000">ActionResult</span> <span style="color:#000">Index</span><span style="color:#000;font-weight:bold">()</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#000;font-weight:bold">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#000;font-weight:bold">}</span>
+</span></span></code></pre></div>
+        <div class="section-index">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+	
+	
+	
+</div>
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+        
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+        
+        
+<ul class="list-inline mb-0">
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="GovCRM" aria-label="GovCRM">
+    <a class="text-white" target="_blank" rel="noopener" href="https://govcrm.hawaii.gov" aria-label="GovCRM">
+      <i class="fab fa-microsoft"></i>
+    </a>
+  </li>
+  
+  <li class="list-inline-item mx-2 h3" data-toggle="tooltip" data-placement="top" title="Governor&#39;s website" aria-label="Governor&#39;s website">
+    <a class="text-white" target="_blank" rel="noopener" href="https://governor.hawaii.gov" aria-label="Governor&#39;s website">
+      <i class="fa fa-globe"></i>
+    </a>
+  </li>
+  
+</ul>
+
+        
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    
+  <script src="/js/main.min.2aff983e9d0d8ecff9ed53e14b657216e2d8d2aff059bf4a5651283020995f1b.js" integrity="sha256-Kv&#43;YPp0Njs/57VPhS2VyFuLY0q/wWb9KVlEoMCCZXxs=" crossorigin="anonymous"></script>
+<script src='/js/tabpane-persist.js'></script>
+
+  </body>
+</html>
